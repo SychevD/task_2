@@ -1,0 +1,25 @@
+{
+  "name": "task_2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.pug --open",
+    "build": "parcel build src/index.pug -d docs --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SychevD/task_2.git"
+  },
+  "keywords": [],
+  "author": "Dima Sychev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SychevD/task_2/issues"
+  },
+  "homepage": "https://SychevD.github.io/task_2/",
+  "devDependencies": {
+    "pug": "^2.0.3",
+    "sass": "^1.20.1"
+  }
+}
