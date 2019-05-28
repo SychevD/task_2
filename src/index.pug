@@ -1,6 +1,38 @@
+include components/button/button.pug 
+include components/textbox/textbox.pug 
 doctype html
 head
 	link(rel='stylesheet', href='main.scss')
-	script(src='main.js')
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js")
+	script(src="https://rawgit.com/RobinHerbots/Inputmask/4.x/dist/jquery.inputmask.bundle.js")
+	script(src='index.js')
 body
-	h1 Hello World
+	+btn({text:"Click me"})
+	| 
+	+btn({text:"click me", isWhite:true})
+	br
+	br
+	+btn({text:"Log in", isWhite:true})
+	| 
+	+btn({text:"Create", isWhite:true})
+	| 
+	+btn({text:"Register"})
+	br
+	br
+	+btn({text:"Войти", isWhite:true})
+	| 
+	+btn({text:"Создать", isWhite:true})
+	| 
+	+btn({text:"Зарегестрироваться"})
+	br
+	br
+	+btn({text:"Перейти к оплате",isLarge:true})
+	br 
+	br
+	|Hello world
+	h1 hi1
+	h2 hi2
+	h3 hi3
+	+txtBox({placeholder:"ololo"})
+	br
+	+txtBox({placeholder:"ДД.ММ.ГГГГ",dataInputmask:"'mask': '9[9].9[9].9999'"})
