@@ -1,0 +1,10 @@
+mixin btn(options)
+	-
+		var btnClass = "button"
+		btnClass += options.isWhite ? " button-white" : ""
+		btnClass += options.isGreen ? " button-green" : ""
+		btnClass += options.isLarge ? " button-large" : ""
+	button(
+		class=btnClass 
+		disabled=options.isDisabled?true:false
+	)= options.text || "Button"

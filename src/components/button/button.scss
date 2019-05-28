@@ -1,0 +1,60 @@
+$buttonBackground: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+$buttonBackgroundHover: linear-gradient(180deg, change-color($purple, $alpha:0.5) 0%, change-color(#8BA4F9, $alpha:0.5) 100%);
+
+.button {
+	position: relative;
+	min-width: 99px;
+	padding: 1px 18px;
+	height: 44px;
+	background: $buttonBackground;
+	border-radius: 22px;
+	border: 0;
+	font-family: Montserrat, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+.button:hover, .button:focus {
+	outline: 0;
+	background: $buttonBackgroundHover;
+}
+
+.button-large {
+	min-width: 320px;
+}
+.button-large::after {
+	content: '';
+	height: 44px;
+	width: 44px;
+	position: absolute;
+	right: 0; top: 0;
+	background: url('img/arrow_forward.svg') center center no-repeat;
+}
+.button-white {
+	color: $purple;
+	background: $mainColor;
+	border: 2px solid transparent;
+	background-clip: padding-box;
+	padding: 1px 16px;
+	&::before {
+		position: absolute;
+		content: '';
+		top:0; right: 0;
+		bottom: 0; left: 0;
+		margin: -2px;
+		border-radius: inherit;
+		background: $buttonBackground;
+		z-index: -1;
+	}
+}
+.button-white:hover, .button-white:focus {
+	outline: 0;
+	background: $mainColor;
+	background-clip: padding-box;
+	&::before {
+		background: $buttonBackgroundHover;
+	}
+}
