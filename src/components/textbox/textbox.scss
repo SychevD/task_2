@@ -1,0 +1,21 @@
+.textbox {
+	width: 320px;
+	padding: 0 18px;
+	height: 44px;
+	font-family: Montserrat, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	border: 1px solid change-color($darkShade, $alpha:0.25);
+	box-sizing: border-box;
+	border-radius: 4px;
+	text-overflow: ellipsis;
+}
+.textbox::placeholder {
+	color: change-color($darkShade, $alpha:0.25);
+}
+.textbox:focus, .textbox:hover {
+	outline: 0;
+	border-color: change-color($darkShade, $alpha:0.5);
+}

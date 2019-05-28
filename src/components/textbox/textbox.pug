@@ -1,0 +1,15 @@
+mixin txtBox(options)
+	-
+		var txtBoxClass = "textbox"
+		txtBoxClass += (options.dataInputmask || options.dataInputmaskRegex) ? " masked-textbox" : ""
+		var txtType = options.type || "text"
+	input(
+		type=txtType
+		class=txtBoxClass 
+		id=options.id ? options.id : false
+		readonly=options.isReadonly ? true : false
+		placeholder=options.placeholder ? options.placeholder : false
+		value=options.value ? options.value : false
+		'data-inputmask'=options.dataInputmask ? options.dataInputmask  : false
+		'data-inputmask-regex'=options.dataInputmaskRegex ? options.dataInputmaskRegex : false
+	)  
